@@ -68,7 +68,7 @@ const deleteNodeAt = (index, linkedList, collection) => {
     previousNode.next = currentNode.next;
 }
 
-// TREES
+// BINARY SEARCH TREE
 const inOrder = (node) => {
     if (node.left) {
         inOrder(node.left);
