@@ -46,3 +46,23 @@ const findOrAdd = (rootNode, newNode) => {
         }
     }
 }
+
+const maxDepth = (node, currentDepth) => {
+    if (!node) {
+        return currentDepth;
+    }
+    currentDepth++;
+    return Math.max(maxDepth(node.left, currentDepth), maxDepth(node.right, currentDepth));
+}
+
+const levelOrder = (node, result=[]) => {
+    if (!node) {
+        return result;
+    }
+    if (!node.left && !node.right) {
+        return result.push([node]);
+    }
+
+    
+
+}
