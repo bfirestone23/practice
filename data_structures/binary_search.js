@@ -30,18 +30,17 @@ const searchRange = (arr, target) => {
         temp1 = startPos;
         startPos = (binarySearch(arr, 0, startPos - 1, target))
     }
-    debugger;
+
     startPos = temp1;
 
     while (endPos !== -1) {
         temp2 = endPos;
         endPos = binarySearch(arr, endPos + 1, arr.length - 1, target)
     }
-    debugger;
+
     endPos = temp2;
 
     return [startPos, endPos]
-
 }
 
 let arr = [1, 3, 3, 5, 5, 5, 8, 9]
